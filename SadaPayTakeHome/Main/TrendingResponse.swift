@@ -18,7 +18,7 @@ struct Repo : Codable{
     let stars : String
     let language : String
     let owner : RepoOwner
-    
+    var isExpanded = false
     enum CodingKeys: String, CodingKey {
         case name
         case description

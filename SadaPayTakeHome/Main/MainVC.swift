@@ -11,11 +11,19 @@ class MainVC: UIViewController {
 
     let tableView = UITableView()
     
+    var repos : [Repo] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureVC()
         configureUI()
         layoutUI()
+        // TODO: Placeholde code to remove error
+        repos.append(Repo(name: "Ahmer", description: "This is a test string, This is a test string, This is a test string, This is a test string, This is a test string,", stars: "30000", language: "Swift", owner: RepoOwner(login: "ahmermughal", avatarUrl: "")))
+        
+        repos.append(Repo(name: "Ahmer 2", description: "This is a test string, This is a test string, This is a test string, This is a test string, This is a test string,", stars: "50000", language: "Swift", owner: RepoOwner(login: "ahmermughal2", avatarUrl: "")))
+        repos.append(Repo(name: "Ahmer 3", description: "This is a test string, This is a test string, This is a test string, This is a test string, This is a test string,", stars: "70000", language: "Swift", owner: RepoOwner(login: "ahmermughal3", avatarUrl: "")))
+        tableView.reloadData()
     }
 
     // MARK: Listeners
@@ -29,15 +37,23 @@ extension MainVC : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // TODO: Placeholde code to remove error
-        return 0
+        return repos.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // TODO: Placeholde code to remove error
-        return TrendingCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: TrendingCell.reuseID, for: indexPath) as! TrendingCell
+        
+        cell.set(repo: repos[indexPath.row])
+        cell.selectionStyle = .none
+        return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        repos[indexPath.row].isExpanded.toggle()
+        tableView.reloadRows(at: [indexPath], with: .automatic)
+    }
     
     
 }
@@ -61,10 +77,7 @@ extension MainVC{
         tableView.dataSource = self
         
         tableView.register(TrendingCell.self, forCellReuseIdentifier: TrendingCell.reuseID)
-        tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.rowHeight = UITableView.automaticDimension
-        
-        
     }
     
     private func layoutUI(){

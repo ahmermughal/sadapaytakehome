@@ -18,7 +18,11 @@ class TrendingCell: UITableViewCell {
     private let starsCountLabel = UILabel()
     private let profileImageView = UIImageView()
     
-    
+    private var descriptionBottomConstraint : NSLayoutConstraint!
+    private var descriptionHeightConstraint : NSLayoutConstraint!
+    private var languageHeightConstraint : NSLayoutConstraint!
+    private var starsHeightConstraint: NSLayoutConstraint!
+    private var nameLabelBottomConstaint : NSLayoutConstraint!
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         configure()
@@ -34,8 +38,33 @@ class TrendingCell: UITableViewCell {
         userNameLabel.text = repo.owner.login
         nameLabel.text = repo.name
         descriptionLabel.text = repo.description
+        profileImageView.image = UIImage(named: "test-image")!
         setImageWithStringOn(label: languageLabel, string: repo.language, image: UIImage(systemName: "circle.fill")!, color: .systemBlue)
-        setImageWithStringOn(label: starsCountLabel, string: repo.stars, image: UIImage(systemName: "star.fill")!, color: .systemBlue)
+        setImageWithStringOn(label: starsCountLabel, string: repo.stars, image: UIImage(systemName: "star.fill")!, color: .golden)
+        
+        if repo.isExpanded{
+            expandCell()
+        }else{
+            shrinkCell()
+        }
+        
+    }
+    
+    func expandCell(){
+        nameLabelBottomConstaint.isActive = false
+        languageHeightConstraint.constant = 30
+        starsHeightConstraint.constant = 30
+        descriptionHeightConstraint.isActive = false
+        descriptionBottomConstraint.isActive = true
+    }
+
+    func shrinkCell(){
+        languageHeightConstraint.constant = 0
+        starsHeightConstraint.constant = 0
+        descriptionHeightConstraint.isActive = true
+        descriptionBottomConstraint.isActive = false
+        nameLabelBottomConstaint.isActive = true
+
     }
     
     private func configure(){
@@ -78,35 +107,44 @@ class TrendingCell: UITableViewCell {
             self.addSubview(view)
         }
         
+        descriptionBottomConstraint =             descriptionLabel.bottomAnchor.constraint(equalTo: languageLabel.topAnchor, constant: -8)
+        
+        descriptionHeightConstraint = descriptionLabel.heightAnchor.constraint(equalToConstant: 0)
+        
+        languageHeightConstraint =             languageLabel.heightAnchor.constraint(equalToConstant: 0)
+        
+        starsHeightConstraint =             starsCountLabel.heightAnchor.constraint(equalToConstant: 0)
+        
+        nameLabelBottomConstaint = nameLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -32)
+        
         NSLayoutConstraint.activate([
         
-            profileImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 32),
+            profileImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 16),
             profileImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 32),
             profileImageView.heightAnchor.constraint(equalToConstant: profileImageViewSize),
             profileImageView.widthAnchor.constraint(equalToConstant: profileImageViewSize),
             
-            
             userNameLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 16),
             userNameLabel.leadingAnchor.constraint(equalTo: profileImageView.trailingAnchor, constant: 16),
             userNameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 16),
-            userNameLabel.heightAnchor.constraint(equalToConstant: 16),
             
             nameLabel.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor, constant: 8),
             nameLabel.leadingAnchor.constraint(equalTo: userNameLabel.leadingAnchor),
             nameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+            nameLabelBottomConstaint,
             
             languageLabel.leadingAnchor.constraint(equalTo: nameLabel.leadingAnchor),
             languageLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -16),
-            languageLabel.heightAnchor.constraint(equalToConstant: 20),
+            languageHeightConstraint,
             
             starsCountLabel.leadingAnchor.constraint(equalTo: languageLabel.trailingAnchor, constant: 16),
             starsCountLabel.bottomAnchor.constraint(equalTo: languageLabel.bottomAnchor),
-            starsCountLabel.heightAnchor.constraint(equalToConstant: 20),
+            starsHeightConstraint,
             
             descriptionLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 8),
             descriptionLabel.leadingAnchor.constraint(equalTo: nameLabel.leadingAnchor),
-            descriptionLabel.bottomAnchor.constraint(equalTo: languageLabel.topAnchor, constant: -8),
-            descriptionLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16)
+            descriptionLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+            descriptionHeightConstraint
         
         ])
         
