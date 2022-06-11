@@ -97,11 +97,8 @@
 		C54F8A5428548D0F0073FDCA /* SadaPayTakeHome */ = {
 			isa = PBXGroup;
 			children = (
-				C54F8A5528548D0F0073FDCA /* AppDelegate.swift */,
-				C54F8A5728548D0F0073FDCA /* SceneDelegate.swift */,
-				C54F8A5928548D0F0073FDCA /* MainVC.swift */,
-				C54F8A5E28548D110073FDCA /* Assets.xcassets */,
-				C54F8A6028548D110073FDCA /* LaunchScreen.storyboard */,
+				C54F8A8628548EC60073FDCA /* Main */,
+				C54F8A8528548E6E0073FDCA /* Support */,
 				C54F8A6328548D110073FDCA /* Info.plist */,
 			);
 			path = SadaPayTakeHome;
@@ -122,6 +119,25 @@
 				C54F8A7828548D110073FDCA /* SadaPayTakeHomeUITestsLaunchTests.swift */,
 			);
 			path = SadaPayTakeHomeUITests;
+			sourceTree = "<group>";
+		};
+		C54F8A8528548E6E0073FDCA /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				C54F8A5528548D0F0073FDCA /* AppDelegate.swift */,
+				C54F8A5728548D0F0073FDCA /* SceneDelegate.swift */,
+				C54F8A5E28548D110073FDCA /* Assets.xcassets */,
+				C54F8A6028548D110073FDCA /* LaunchScreen.storyboard */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		C54F8A8628548EC60073FDCA /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C54F8A5928548D0F0073FDCA /* MainVC.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
