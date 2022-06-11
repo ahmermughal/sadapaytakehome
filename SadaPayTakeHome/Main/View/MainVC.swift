@@ -6,10 +6,15 @@
 //
 
 import UIKit
-
+import Lottie
 class MainVC: UIViewController {
 
     let tableView = UITableView()
+    
+    let errorView = UIView()
+    let animationView = AnimationView(name: "error_anim")
+    let errorTitleLabel = UILabel()
+    let errorDescriptionLabel = UILabel()
     
     var viewModel : MainViewModel
     
@@ -28,12 +33,26 @@ class MainVC: UIViewController {
         configureVC()
         configureUI()
         layoutUI()
+        layoutErrorView()
         viewModel.getTrendingData()
     }
 
     // MARK: Listeners
     @objc private func rightMenuTapped(){
         
+    }
+    
+    private func showErrorView(){
+        tableView.isHidden = true
+        animationView.play()
+        animationView.loopMode = .loop
+        errorView.isHidden = false
+    }
+    
+    private func hideErrorView(){
+        tableView.isHidden = false
+        errorView.isHidden = true
+        animationView.stop()
     }
     
     
@@ -70,7 +89,7 @@ extension MainVC: MainViewModelDelegate{
     }
     
     func showError(error: String) {
-        
+        showErrorView()
     }
     
     func receivedData() {
@@ -98,19 +117,69 @@ extension MainVC{
         
         tableView.register(TrendingCell.self, forCellReuseIdentifier: TrendingCell.reuseID)
         tableView.rowHeight = UITableView.automaticDimension
+        
+        errorView.isHidden = true
+        errorTitleLabel.font = UIFont.preferredFont(forTextStyle: .headline)
+        errorTitleLabel.adjustsFontForContentSizeCategory = true
+        errorDescriptionLabel.font = UIFont.preferredFont(forTextStyle: .caption1)
+        errorDescriptionLabel.adjustsFontForContentSizeCategory = true
+        
+        errorDescriptionLabel.textColor = .secondaryLabel
+        errorTitleLabel.textAlignment = .center
+        errorDescriptionLabel.textAlignment = .center
+        
+        errorTitleLabel.text = StringConstants.errorTitle
+        errorDescriptionLabel.text = StringConstants.errorDescription
+                
     }
     
     private func layoutUI(){
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        errorView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(errorView)
         view.addSubview(tableView)
+        
         
         NSLayoutConstraint.activate([
         
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             
+            
+            errorView.topAnchor.constraint(equalTo: view.topAnchor),
+            errorView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            errorView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            errorView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+        ])
+    }
+    
+    private func layoutErrorView(){
+        
+        let views = [animationView, errorTitleLabel, errorDescriptionLabel]
+        
+        for item in views{
+            item.translatesAutoresizingMaskIntoConstraints = false
+            errorView.addSubview(item)
+        }
+        
+        NSLayoutConstraint.activate([
+        
+            animationView.centerXAnchor.constraint(equalTo: errorView.centerXAnchor),
+            animationView.centerYAnchor.constraint(equalTo: errorView.centerYAnchor, constant: -100),
+            animationView.heightAnchor.constraint(equalToConstant: 300),
+            animationView.widthAnchor.constraint(equalToConstant: 260),
+            
+            errorTitleLabel.topAnchor.constraint(equalTo: animationView.bottomAnchor, constant: 16),
+            errorTitleLabel.leadingAnchor.constraint(equalTo: errorView.leadingAnchor, constant: 16),
+            errorTitleLabel.trailingAnchor.constraint(equalTo: errorView.trailingAnchor, constant: -16),
+            
+            errorDescriptionLabel.topAnchor.constraint(equalTo: errorTitleLabel.bottomAnchor, constant: 16),
+            errorDescriptionLabel.leadingAnchor.constraint(equalTo: errorView.leadingAnchor, constant: 16),
+            errorDescriptionLabel.trailingAnchor.constraint(equalTo: errorView.trailingAnchor, constant: -16),
+        
         ])
         
     }

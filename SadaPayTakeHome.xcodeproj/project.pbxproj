@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7FCB0B957FB12AE633E62D56 /* Pods_SadaPayTakeHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821798670D82339881614A63 /* Pods_SadaPayTakeHome.framework */; };
+		89D956C7E293D3EBEAC2367F /* Pods_SadaPayTakeHomeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1FC30DC9472F80DDAC93374 /* Pods_SadaPayTakeHomeTests.framework */; };
 		C54F8A5628548D0F0073FDCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A5528548D0F0073FDCA /* AppDelegate.swift */; };
 		C54F8A5828548D0F0073FDCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A5728548D0F0073FDCA /* SceneDelegate.swift */; };
 		C54F8A5A28548D0F0073FDCA /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A5928548D0F0073FDCA /* MainVC.swift */; };
 		C54F8A5F28548D110073FDCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C54F8A5E28548D110073FDCA /* Assets.xcassets */; };
 		C54F8A6228548D110073FDCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C54F8A6028548D110073FDCA /* LaunchScreen.storyboard */; };
-		C54F8A6D28548D110073FDCA /* SadaPayTakeHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A6C28548D110073FDCA /* SadaPayTakeHomeTests.swift */; };
-		C54F8A7728548D110073FDCA /* SadaPayTakeHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A7628548D110073FDCA /* SadaPayTakeHomeUITests.swift */; };
-		C54F8A7928548D110073FDCA /* SadaPayTakeHomeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A7828548D110073FDCA /* SadaPayTakeHomeUITestsLaunchTests.swift */; };
 		C54F8A89285497150073FDCA /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A88285497150073FDCA /* StringConstants.swift */; };
 		C54F8A8B2854975C0073FDCA /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A8A2854975C0073FDCA /* UIImage+Ext.swift */; };
 		C54F8A902854984F0073FDCA /* TrendingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A8F2854984F0073FDCA /* TrendingCell.swift */; };
@@ -27,6 +26,8 @@
 		C54F8AA22854CF850073FDCA /* TrendingAPIResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = C54F8AA12854CF850073FDCA /* TrendingAPIResponse.json */; };
 		C54F8AA72854E8190073FDCA /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8AA62854E8190073FDCA /* MainViewModel.swift */; };
 		C54F8AA92854EEE90073FDCA /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8AA82854EEE90073FDCA /* UIImageView+Ext.swift */; };
+		C54F8AAC2854F2C20073FDCA /* error_anim.json in Resources */ = {isa = PBXBuildFile; fileRef = C54F8AAB2854F2C20073FDCA /* error_anim.json */; };
+		E98C0D066300E1D7712CF074 /* Pods_SadaPayTakeHome_SadaPayTakeHomeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E089E46C9C12278C31E16E48 /* Pods_SadaPayTakeHome_SadaPayTakeHomeUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0838E4812F32A46FF995FCEF /* Pods-SadaPayTakeHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SadaPayTakeHome.debug.xcconfig"; path = "Target Support Files/Pods-SadaPayTakeHome/Pods-SadaPayTakeHome.debug.xcconfig"; sourceTree = "<group>"; };
+		1E09F1D42B09AB49ED2BF1AA /* Pods-SadaPayTakeHomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SadaPayTakeHomeTests.debug.xcconfig"; path = "Target Support Files/Pods-SadaPayTakeHomeTests/Pods-SadaPayTakeHomeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		228A87F9A437DE1B13524514 /* Pods-SadaPayTakeHomeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SadaPayTakeHomeTests.release.xcconfig"; path = "Target Support Files/Pods-SadaPayTakeHomeTests/Pods-SadaPayTakeHomeTests.release.xcconfig"; sourceTree = "<group>"; };
+		4477DF8760688782C5F865DA /* Pods-SadaPayTakeHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SadaPayTakeHome.release.xcconfig"; path = "Target Support Files/Pods-SadaPayTakeHome/Pods-SadaPayTakeHome.release.xcconfig"; sourceTree = "<group>"; };
+		821798670D82339881614A63 /* Pods_SadaPayTakeHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SadaPayTakeHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		913072E9265C50F2078EED4D /* Pods-SadaPayTakeHome-SadaPayTakeHomeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SadaPayTakeHome-SadaPayTakeHomeUITests.release.xcconfig"; path = "Target Support Files/Pods-SadaPayTakeHome-SadaPayTakeHomeUITests/Pods-SadaPayTakeHome-SadaPayTakeHomeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A1FC30DC9472F80DDAC93374 /* Pods_SadaPayTakeHomeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SadaPayTakeHomeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFF9DB0A66C853A94B300F14 /* Pods-SadaPayTakeHome-SadaPayTakeHomeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SadaPayTakeHome-SadaPayTakeHomeUITests.debug.xcconfig"; path = "Target Support Files/Pods-SadaPayTakeHome-SadaPayTakeHomeUITests/Pods-SadaPayTakeHome-SadaPayTakeHomeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C54F8A5228548D0F0073FDCA /* SadaPayTakeHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SadaPayTakeHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C54F8A5528548D0F0073FDCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C54F8A5728548D0F0073FDCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,10 +64,7 @@
 		C54F8A6128548D110073FDCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C54F8A6328548D110073FDCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C54F8A6828548D110073FDCA /* SadaPayTakeHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SadaPayTakeHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C54F8A6C28548D110073FDCA /* SadaPayTakeHomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SadaPayTakeHomeTests.swift; sourceTree = "<group>"; };
 		C54F8A7228548D110073FDCA /* SadaPayTakeHomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SadaPayTakeHomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C54F8A7628548D110073FDCA /* SadaPayTakeHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SadaPayTakeHomeUITests.swift; sourceTree = "<group>"; };
-		C54F8A7828548D110073FDCA /* SadaPayTakeHomeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SadaPayTakeHomeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C54F8A88285497150073FDCA /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
 		C54F8A8A2854975C0073FDCA /* UIImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
 		C54F8A8F2854984F0073FDCA /* TrendingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingCell.swift; sourceTree = "<group>"; };
@@ -71,6 +77,8 @@
 		C54F8AA12854CF850073FDCA /* TrendingAPIResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TrendingAPIResponse.json; sourceTree = "<group>"; };
 		C54F8AA62854E8190073FDCA /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		C54F8AA82854EEE90073FDCA /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
+		C54F8AAB2854F2C20073FDCA /* error_anim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = error_anim.json; sourceTree = "<group>"; };
+		E089E46C9C12278C31E16E48 /* Pods_SadaPayTakeHome_SadaPayTakeHomeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SadaPayTakeHome_SadaPayTakeHomeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FCB0B957FB12AE633E62D56 /* Pods_SadaPayTakeHome.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89D956C7E293D3EBEAC2367F /* Pods_SadaPayTakeHomeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,19 +102,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E98C0D066300E1D7712CF074 /* Pods_SadaPayTakeHome_SadaPayTakeHomeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C5F9B16991A00D1C95E2FC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				821798670D82339881614A63 /* Pods_SadaPayTakeHome.framework */,
+				E089E46C9C12278C31E16E48 /* Pods_SadaPayTakeHome_SadaPayTakeHomeUITests.framework */,
+				A1FC30DC9472F80DDAC93374 /* Pods_SadaPayTakeHomeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C54F8A4928548D0F0073FDCA = {
 			isa = PBXGroup;
 			children = (
 				C54F8A5428548D0F0073FDCA /* SadaPayTakeHome */,
 				C54F8A6B28548D110073FDCA /* SadaPayTakeHomeTests */,
-				C54F8A7528548D110073FDCA /* SadaPayTakeHomeUITests */,
 				C54F8A5328548D0F0073FDCA /* Products */,
+				EB4A5A99090275E6A8289DA8 /* Pods */,
+				3C5F9B16991A00D1C95E2FC5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +143,7 @@
 		C54F8A5428548D0F0073FDCA /* SadaPayTakeHome */ = {
 			isa = PBXGroup;
 			children = (
+				C54F8AAA2854F2A60073FDCA /* LottieStuff */,
 				C54F8A9A2854C2230073FDCA /* NetworkManager */,
 				C54F8A972854AB390073FDCA /* SampleData */,
 				C54F8A8C2854979D0073FDCA /* Extentions */,
@@ -135,21 +158,11 @@
 		C54F8A6B28548D110073FDCA /* SadaPayTakeHomeTests */ = {
 			isa = PBXGroup;
 			children = (
-				C54F8A6C28548D110073FDCA /* SadaPayTakeHomeTests.swift */,
 				C54F8A982854C0530073FDCA /* NetworkManagerTests.swift */,
 				C54F8A9F2854CD7D0073FDCA /* MockURLProtocol.swift */,
 				C54F8AA12854CF850073FDCA /* TrendingAPIResponse.json */,
 			);
 			path = SadaPayTakeHomeTests;
-			sourceTree = "<group>";
-		};
-		C54F8A7528548D110073FDCA /* SadaPayTakeHomeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				C54F8A7628548D110073FDCA /* SadaPayTakeHomeUITests.swift */,
-				C54F8A7828548D110073FDCA /* SadaPayTakeHomeUITestsLaunchTests.swift */,
-			);
-			path = SadaPayTakeHomeUITests;
 			sourceTree = "<group>";
 		};
 		C54F8A8528548E6E0073FDCA /* Support */ = {
@@ -240,6 +253,27 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		C54F8AAA2854F2A60073FDCA /* LottieStuff */ = {
+			isa = PBXGroup;
+			children = (
+				C54F8AAB2854F2C20073FDCA /* error_anim.json */,
+			);
+			path = LottieStuff;
+			sourceTree = "<group>";
+		};
+		EB4A5A99090275E6A8289DA8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0838E4812F32A46FF995FCEF /* Pods-SadaPayTakeHome.debug.xcconfig */,
+				4477DF8760688782C5F865DA /* Pods-SadaPayTakeHome.release.xcconfig */,
+				BFF9DB0A66C853A94B300F14 /* Pods-SadaPayTakeHome-SadaPayTakeHomeUITests.debug.xcconfig */,
+				913072E9265C50F2078EED4D /* Pods-SadaPayTakeHome-SadaPayTakeHomeUITests.release.xcconfig */,
+				1E09F1D42B09AB49ED2BF1AA /* Pods-SadaPayTakeHomeTests.debug.xcconfig */,
+				228A87F9A437DE1B13524514 /* Pods-SadaPayTakeHomeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -247,9 +281,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C54F8A7C28548D110073FDCA /* Build configuration list for PBXNativeTarget "SadaPayTakeHome" */;
 			buildPhases = (
+				A46465588FA630A46DE5412E /* [CP] Check Pods Manifest.lock */,
 				C54F8A4E28548D0F0073FDCA /* Sources */,
 				C54F8A4F28548D0F0073FDCA /* Frameworks */,
 				C54F8A5028548D0F0073FDCA /* Resources */,
+				F2282E32645B382F2099ED3A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -264,6 +300,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C54F8A7F28548D110073FDCA /* Build configuration list for PBXNativeTarget "SadaPayTakeHomeTests" */;
 			buildPhases = (
+				D810DFD60BB69B2C64508BEC /* [CP] Check Pods Manifest.lock */,
 				C54F8A6428548D110073FDCA /* Sources */,
 				C54F8A6528548D110073FDCA /* Frameworks */,
 				C54F8A6628548D110073FDCA /* Resources */,
@@ -282,9 +319,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C54F8A8228548D110073FDCA /* Build configuration list for PBXNativeTarget "SadaPayTakeHomeUITests" */;
 			buildPhases = (
+				E259981D6F5C9803D851410E /* [CP] Check Pods Manifest.lock */,
 				C54F8A6E28548D110073FDCA /* Sources */,
 				C54F8A6F28548D110073FDCA /* Frameworks */,
 				C54F8A7028548D110073FDCA /* Resources */,
+				BD781CD28D31A591CE5B229D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -346,6 +385,7 @@
 			files = (
 				C54F8A6228548D110073FDCA /* LaunchScreen.storyboard in Resources */,
 				C54F8A5F28548D110073FDCA /* Assets.xcassets in Resources */,
+				C54F8AAC2854F2C20073FDCA /* error_anim.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +405,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A46465588FA630A46DE5412E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SadaPayTakeHome-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD781CD28D31A591CE5B229D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SadaPayTakeHome-SadaPayTakeHomeUITests/Pods-SadaPayTakeHome-SadaPayTakeHomeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SadaPayTakeHome-SadaPayTakeHomeUITests/Pods-SadaPayTakeHome-SadaPayTakeHomeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SadaPayTakeHome-SadaPayTakeHomeUITests/Pods-SadaPayTakeHome-SadaPayTakeHomeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D810DFD60BB69B2C64508BEC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SadaPayTakeHomeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E259981D6F5C9803D851410E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SadaPayTakeHome-SadaPayTakeHomeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2282E32645B382F2099ED3A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SadaPayTakeHome/Pods-SadaPayTakeHome-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SadaPayTakeHome/Pods-SadaPayTakeHome-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SadaPayTakeHome/Pods-SadaPayTakeHome-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C54F8A4E28548D0F0073FDCA /* Sources */ = {
@@ -392,7 +535,6 @@
 			files = (
 				C54F8AA02854CD7D0073FDCA /* MockURLProtocol.swift in Sources */,
 				C54F8A992854C0530073FDCA /* NetworkManagerTests.swift in Sources */,
-				C54F8A6D28548D110073FDCA /* SadaPayTakeHomeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,8 +542,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C54F8A7928548D110073FDCA /* SadaPayTakeHomeUITestsLaunchTests.swift in Sources */,
-				C54F8A7728548D110073FDCA /* SadaPayTakeHomeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,6 +690,7 @@
 		};
 		C54F8A7D28548D110073FDCA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0838E4812F32A46FF995FCEF /* Pods-SadaPayTakeHome.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -579,6 +720,7 @@
 		};
 		C54F8A7E28548D110073FDCA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4477DF8760688782C5F865DA /* Pods-SadaPayTakeHome.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -608,6 +750,7 @@
 		};
 		C54F8A8028548D110073FDCA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E09F1D42B09AB49ED2BF1AA /* Pods-SadaPayTakeHomeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -628,6 +771,7 @@
 		};
 		C54F8A8128548D110073FDCA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 228A87F9A437DE1B13524514 /* Pods-SadaPayTakeHomeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -648,6 +792,7 @@
 		};
 		C54F8A8328548D110073FDCA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFF9DB0A66C853A94B300F14 /* Pods-SadaPayTakeHome-SadaPayTakeHomeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -666,6 +811,7 @@
 		};
 		C54F8A8428548D110073FDCA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 913072E9265C50F2078EED4D /* Pods-SadaPayTakeHome-SadaPayTakeHomeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
