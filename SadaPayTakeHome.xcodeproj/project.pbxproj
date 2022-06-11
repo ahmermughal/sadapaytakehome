@@ -28,6 +28,7 @@
 		C54F8AA92854EEE90073FDCA /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8AA82854EEE90073FDCA /* UIImageView+Ext.swift */; };
 		C54F8AAC2854F2C20073FDCA /* error_anim.json in Resources */ = {isa = PBXBuildFile; fileRef = C54F8AAB2854F2C20073FDCA /* error_anim.json */; };
 		C54F8AAE2854F7760073FDCA /* SadaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8AAD2854F7760073FDCA /* SadaButton.swift */; };
+		C54F8AB128550DCB0073FDCA /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8AB028550DCB0073FDCA /* CacheManager.swift */; };
 		E98C0D066300E1D7712CF074 /* Pods_SadaPayTakeHome_SadaPayTakeHomeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E089E46C9C12278C31E16E48 /* Pods_SadaPayTakeHome_SadaPayTakeHomeUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		C54F8AA82854EEE90073FDCA /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
 		C54F8AAB2854F2C20073FDCA /* error_anim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = error_anim.json; sourceTree = "<group>"; };
 		C54F8AAD2854F7760073FDCA /* SadaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SadaButton.swift; sourceTree = "<group>"; };
+		C54F8AB028550DCB0073FDCA /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		E089E46C9C12278C31E16E48 /* Pods_SadaPayTakeHome_SadaPayTakeHomeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SadaPayTakeHome_SadaPayTakeHomeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -145,6 +147,7 @@
 		C54F8A5428548D0F0073FDCA /* SadaPayTakeHome */ = {
 			isa = PBXGroup;
 			children = (
+				C54F8AAF28550DB10073FDCA /* CacheManager */,
 				C54F8AAA2854F2A60073FDCA /* LottieStuff */,
 				C54F8A9A2854C2230073FDCA /* NetworkManager */,
 				C54F8A972854AB390073FDCA /* SampleData */,
@@ -262,6 +265,14 @@
 				C54F8AAB2854F2C20073FDCA /* error_anim.json */,
 			);
 			path = LottieStuff;
+			sourceTree = "<group>";
+		};
+		C54F8AAF28550DB10073FDCA /* CacheManager */ = {
+			isa = PBXGroup;
+			children = (
+				C54F8AB028550DCB0073FDCA /* CacheManager.swift */,
+			);
+			path = CacheManager;
 			sourceTree = "<group>";
 		};
 		EB4A5A99090275E6A8289DA8 /* Pods */ = {
@@ -523,6 +534,7 @@
 				C54F8AAE2854F7760073FDCA /* SadaButton.swift in Sources */,
 				C54F8A8B2854975C0073FDCA /* UIImage+Ext.swift in Sources */,
 				C54F8A89285497150073FDCA /* StringConstants.swift in Sources */,
+				C54F8AB128550DCB0073FDCA /* CacheManager.swift in Sources */,
 				C54F8A942854A8530073FDCA /* TrendingResponse.swift in Sources */,
 				C54F8A902854984F0073FDCA /* TrendingCell.swift in Sources */,
 				C54F8A5A28548D0F0073FDCA /* MainVC.swift in Sources */,

@@ -120,10 +120,10 @@ extension MainVC{
     private func configureVC(){
         view.backgroundColor = .systemBackground
         
-        let menuDotsImage = UIImage.menuIcon.withRenderingMode(.alwaysTemplate)
+        let menuDotsImage = UIImage(systemName: "arrow.2.circlepath.circle")!.withRenderingMode(.alwaysTemplate)
         let menuButton = UIBarButtonItem(image: menuDotsImage, style: .plain, target: self, action: #selector(rightMenuTapped))
         self.navigationItem.rightBarButtonItem  = menuButton
-        navigationController?.navigationBar.tintColor = .darkGray
+        navigationController?.navigationBar.tintColor = .secondaryLabel
         
         title = StringConstants.trending
         

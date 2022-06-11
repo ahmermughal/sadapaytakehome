@@ -11,9 +11,10 @@ import UIKit
 class NetworkManager{
 
     static let shared = NetworkManager()
-    private let baseURL = "https://api.github.com/search/repositories"
+    private let baseURL = "https://api.github.com/"
     private var urlSession: URLSession
     let imageCache = NSCache<NSString, UIImage>()
+    let cacheManager = CacheManager<TrendingResponse>()
     
     init(urlSession : URLSession = .shared){
         self.urlSession = urlSession
@@ -21,12 +22,20 @@ class NetworkManager{
     
     func getTrendingRepos(completed : @escaping (Result<TrendingResponse, NetworkError>) -> Void){
         
-        let urlStr = baseURL + "?q=language=+sort:stars"
+        let urlStr = baseURL + "search/repositories?q=language=+sort:stars"
+        
+        let cacheKey = NSString(string: urlStr)
+        
+        if let cacheData = cacheManager.getValueFor(key: cacheKey){
+            completed(.success(cacheData))
+            return
+        }
         
         getAPI(url: urlStr, resultType: TrendingResponse.self) { result in
             
             switch result{
             case .success(let response):
+                self.cacheManager.add(value: response, key: cacheKey)
                 completed(.success(response))
                 break
             case .failure(let error):
