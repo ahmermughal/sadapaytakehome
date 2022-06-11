@@ -9,6 +9,7 @@ import UIKit
 import Lottie
 class MainVC: UIViewController {
     
+    // MARK: UI Elements
     let tableView = UITableView()
     let retryButton = SadaButton(borderColor: .systemGreen, title: StringConstants.retryButtonTitle)
     let errorView = UIView()
@@ -18,6 +19,7 @@ class MainVC: UIViewController {
     
     var viewModel : MainViewModel
     
+    // MARK: Inits
     required init(viewModel: MainViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -65,6 +67,7 @@ class MainVC: UIViewController {
     
 }
 
+// MARK: TableView Delegates
 extension MainVC : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -95,6 +98,7 @@ extension MainVC : UITableViewDataSource, UITableViewDelegate{
     }
 }
 
+// MARK: ViewModel Delegate
 extension MainVC: MainViewModelDelegate{
     func updateLoader(isLoading: Bool) {
         if isLoading{

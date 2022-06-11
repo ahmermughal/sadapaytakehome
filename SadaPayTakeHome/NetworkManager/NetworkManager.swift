@@ -10,16 +10,19 @@ import UIKit
 
 class NetworkManager{
 
+    // MARK: Variables
     static let shared = NetworkManager()
     private let baseURL = "https://api.github.com/"
     private var urlSession: URLSession
     let imageCache = NSCache<NSString, UIImage>()
     let cacheManager = CacheManager<TrendingResponse>()
     
+    // MARK: Init
     init(urlSession : URLSession = .shared){
         self.urlSession = urlSession
     }
     
+    // MARK: API Calls
     func getTrendingRepos(completed : @escaping (Result<TrendingResponse, NetworkError>) -> Void){
         
         let urlStr = baseURL + "search/repositories?q=language=+sort:stars"
@@ -43,34 +46,6 @@ class NetworkManager{
                 break
             }
         }
-    }
-    
-    func getAPI<T:Decodable>(url : String, resultType: T.Type, completed: @escaping (Result<T, NetworkError>) -> Void){
-        
-        guard let url = URL(string: url) else {
-            
-            completed(.failure(.invalidURL))
-            return
-        }
-        
-        let dataTask = urlSession.dataTask(with: url) { data, response, error in
-            
-            guard let data = data else{
-                completed(.failure(.invalidData))
-                return
-            }
-
-            do{
-                let decoder = JSONDecoder()
-                let response = try decoder.decode(T.self, from: data)
-                completed(.success(response))
-            }catch{
-                completed(.failure(.invalidData))
-            }
-            
-        }
-        
-        dataTask.resume()
     }
     
     func downloadImage(from urlString: String, completed: @escaping (UIImage?) -> Void){
@@ -108,6 +83,45 @@ class NetworkManager{
             
         }
         task.resume()
+    }
+    
+}
+    
+    // MARK: API Helper Functions
+extension NetworkManager{
+    
+    func getAPI<T:Decodable>(url : String, resultType: T.Type, completed: @escaping (Result<T, NetworkError>) -> Void){
+        
+        guard let url = URL(string: url) else {
+            
+            completed(.failure(.invalidURL))
+            return
+        }
+        
+        let dataTask = urlSession.dataTask(with: url) { data, response, error in
+            
+            guard let response = response as? HTTPURLResponse, (200 ..< 300).contains(response.statusCode) else {
+                completed(.failure(.invalidResponse))
+                return
+            }
+
+            
+            guard let data = data else{
+                completed(.failure(.invalidData))
+                return
+            }
+
+            do{
+                let decoder = JSONDecoder()
+                let response = try decoder.decode(T.self, from: data)
+                completed(.success(response))
+            }catch{
+                completed(.failure(.invalidData))
+            }
+            
+        }
+        
+        dataTask.resume()
     }
     
 }

@@ -150,7 +150,6 @@
 				C54F8AAF28550DB10073FDCA /* CacheManager */,
 				C54F8AAA2854F2A60073FDCA /* LottieStuff */,
 				C54F8A9A2854C2230073FDCA /* NetworkManager */,
-				C54F8A972854AB390073FDCA /* SampleData */,
 				C54F8A8C2854979D0073FDCA /* Extentions */,
 				C54F8A87285496F80073FDCA /* Utils */,
 				C54F8A8628548EC60073FDCA /* Main */,
@@ -216,13 +215,6 @@
 				C54F8AAD2854F7760073FDCA /* SadaButton.swift */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		C54F8A972854AB390073FDCA /* SampleData */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SampleData;
 			sourceTree = "<group>";
 		};
 		C54F8A9A2854C2230073FDCA /* NetworkManager */ = {

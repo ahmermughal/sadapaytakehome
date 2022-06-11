@@ -48,7 +48,7 @@ class TrendingCell: UITableViewCell, ShimmeringViewProtocol {
         nameLabel.text = repo.name
         descriptionLabel.text = repo.description
         setImageWithStringOn(label: languageLabel, string: repo.language ?? "", image: UIImage(systemName: "circle.fill")!, color: .systemBlue)
-        setImageWithStringOn(label: starsCountLabel, string: String(repo.stars), image: UIImage(systemName: "star.fill")!, color: .golden)
+        setImageWithStringOn(label: starsCountLabel, string: String(format: "%.0f", repo.stars), image: UIImage(systemName: "star.fill")!, color: .golden)
         
         profileImageView.downloadImage(fromURL: repo.owner.avatarUrl)
         
