@@ -30,7 +30,6 @@ class NetworkManager{
                 completed(.failure(.invalidData))
                 return
             }
-            print(String(decoding: data, as: UTF8.self))
 
             do{
                 let decoder = JSONDecoder()

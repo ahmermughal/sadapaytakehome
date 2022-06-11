@@ -65,6 +65,32 @@ class NetworkManagerTests: XCTestCase {
         self.wait(for: [expectation], timeout: 5)
     }
     
+    func testGetMethod_WhenDataIsInvalid_ShouldReturnInvalidDataError(){
+        
+        let config = URLSessionConfiguration.ephemeral
+        config.protocolClasses = [MockURLProtocol.self]
+        let urlSession = URLSession(configuration: config)
+        let jsonData = Data()
+        MockURLProtocol.mockData = jsonData
+                
+        let netManager = NetworkManager(urlSession: urlSession)
+        
+        let expectation = self.expectation(description: "Network Manager Invalid Data")
+        
+        netManager.getAPI(url: "www.google.com", resultType: TrendingResponse.self) { result in
+            
+            switch result{
+            case .success(_):
+                break
+            case .failure(let error):
+                XCTAssertEqual(error, .invalidData)
+                expectation.fulfill()
+                break
+            }
+        }
+        self.wait(for: [expectation], timeout: 10)
+    }
+    
     
     func getData(name : String)->Data{
 
