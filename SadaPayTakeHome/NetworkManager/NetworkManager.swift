@@ -64,5 +64,31 @@ class NetworkManager{
         dataTask.resume()
     }
     
+    func downloadImage(from urlString: String, completed: @escaping (UIImage?) -> Void){
+        
+        guard let urlStr = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else{
+            completed(nil)
+            return
+        }
+        
+        guard let url = URL(string: urlStr) else{
+            completed(nil)
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            guard error == nil,
+                  let response = response as? HTTPURLResponse, response.statusCode == 200,
+                  let data = data,
+                  let image = UIImage(data: data)
+            else{
+                completed(nil)
+                return
+            }
+            completed(image)
+            
+        }
+        task.resume()
+    }
     
 }

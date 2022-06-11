@@ -38,9 +38,10 @@ class TrendingCell: UITableViewCell {
         userNameLabel.text = repo.owner.login
         nameLabel.text = repo.name
         descriptionLabel.text = repo.description
-        profileImageView.image = UIImage(named: "test-image")!
         setImageWithStringOn(label: languageLabel, string: repo.language ?? "", image: UIImage(systemName: "circle.fill")!, color: .systemBlue)
         setImageWithStringOn(label: starsCountLabel, string: String(repo.stars), image: UIImage(systemName: "star.fill")!, color: .golden)
+        
+        profileImageView.downloadImage(fromURL: repo.owner.avatarUrl)
         
         if repo.isExpanded{
             expandCell()
