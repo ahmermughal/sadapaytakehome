@@ -21,15 +21,32 @@ class MainVC: UIViewController {
 
 }
 
-// MARK: UI Setup
+extension MainVC : UITableViewDataSource, UITableViewDelegate{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // TODO: Placeholde code to remove error
+        return 0
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // TODO: Placeholde code to remove error
+        return UITableViewCell()
+    }
+    
+    
+    
+}
 
+// MARK: UI Setup
 extension MainVC{
     private func configureVC(){
         
     }
     
     private func configureUI(){
-        tableView.backgroundColor = .green
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     private func layoutUI(){
