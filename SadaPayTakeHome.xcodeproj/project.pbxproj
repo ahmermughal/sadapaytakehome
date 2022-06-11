@@ -20,6 +20,9 @@
 		C54F8A902854984F0073FDCA /* TrendingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A8F2854984F0073FDCA /* TrendingCell.swift */; };
 		C54F8A922854A5E60073FDCA /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A912854A5E60073FDCA /* UIColor+Ext.swift */; };
 		C54F8A942854A8530073FDCA /* TrendingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A932854A8530073FDCA /* TrendingResponse.swift */; };
+		C54F8A992854C0530073FDCA /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A982854C0530073FDCA /* NetworkManagerTests.swift */; };
+		C54F8A9C2854C3F30073FDCA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A9B2854C3F30073FDCA /* NetworkManager.swift */; };
+		C54F8A9E2854C55B0073FDCA /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A9D2854C55B0073FDCA /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		C54F8A8F2854984F0073FDCA /* TrendingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingCell.swift; sourceTree = "<group>"; };
 		C54F8A912854A5E60073FDCA /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		C54F8A932854A8530073FDCA /* TrendingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingResponse.swift; sourceTree = "<group>"; };
+		C54F8A982854C0530073FDCA /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		C54F8A9B2854C3F30073FDCA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C54F8A9D2854C55B0073FDCA /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,7 @@
 		C54F8A5428548D0F0073FDCA /* SadaPayTakeHome */ = {
 			isa = PBXGroup;
 			children = (
+				C54F8A9A2854C2230073FDCA /* NetworkManager */,
 				C54F8A972854AB390073FDCA /* SampleData */,
 				C54F8A8C2854979D0073FDCA /* Extentions */,
 				C54F8A87285496F80073FDCA /* Utils */,
@@ -121,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				C54F8A6C28548D110073FDCA /* SadaPayTakeHomeTests.swift */,
+				C54F8A982854C0530073FDCA /* NetworkManagerTests.swift */,
 			);
 			path = SadaPayTakeHomeTests;
 			sourceTree = "<group>";
@@ -185,6 +193,15 @@
 			children = (
 			);
 			path = SampleData;
+			sourceTree = "<group>";
+		};
+		C54F8A9A2854C2230073FDCA /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				C54F8A9B2854C3F30073FDCA /* NetworkManager.swift */,
+				C54F8A9D2854C55B0073FDCA /* NetworkError.swift */,
+			);
+			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,12 +334,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C54F8A9C2854C3F30073FDCA /* NetworkManager.swift in Sources */,
 				C54F8A922854A5E60073FDCA /* UIColor+Ext.swift in Sources */,
 				C54F8A8B2854975C0073FDCA /* UIImage+Ext.swift in Sources */,
 				C54F8A89285497150073FDCA /* StringConstants.swift in Sources */,
 				C54F8A942854A8530073FDCA /* TrendingResponse.swift in Sources */,
 				C54F8A902854984F0073FDCA /* TrendingCell.swift in Sources */,
 				C54F8A5A28548D0F0073FDCA /* MainVC.swift in Sources */,
+				C54F8A9E2854C55B0073FDCA /* NetworkError.swift in Sources */,
 				C54F8A5628548D0F0073FDCA /* AppDelegate.swift in Sources */,
 				C54F8A5828548D0F0073FDCA /* SceneDelegate.swift in Sources */,
 			);
@@ -332,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C54F8A992854C0530073FDCA /* NetworkManagerTests.swift in Sources */,
 				C54F8A6D28548D110073FDCA /* SadaPayTakeHomeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
