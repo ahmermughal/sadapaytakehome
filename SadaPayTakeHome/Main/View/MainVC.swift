@@ -10,7 +10,7 @@ import Lottie
 class MainVC: UIViewController {
 
     let tableView = UITableView()
-    
+    let retryButton = SadaButton(borderColor: .systemGreen, title: StringConstants.retryButtonTitle)
     let errorView = UIView()
     let animationView = AnimationView(name: "error_anim")
     let errorTitleLabel = UILabel()
@@ -42,6 +42,13 @@ class MainVC: UIViewController {
         
     }
     
+    @objc private func retryButtonTapped(){
+        hideErrorView()
+        viewModel.getTrendingData()
+        
+    }
+    
+    // MARK: Functions
     private func showErrorView(){
         tableView.isHidden = true
         animationView.play()
@@ -130,7 +137,7 @@ extension MainVC{
         
         errorTitleLabel.text = StringConstants.errorTitle
         errorDescriptionLabel.text = StringConstants.errorDescription
-                
+        retryButton.addTarget(self, action: #selector(retryButtonTapped), for: .touchUpInside)
     }
     
     private func layoutUI(){
@@ -158,7 +165,7 @@ extension MainVC{
     
     private func layoutErrorView(){
         
-        let views = [animationView, errorTitleLabel, errorDescriptionLabel]
+        let views = [animationView, errorTitleLabel, errorDescriptionLabel, retryButton]
         
         for item in views{
             item.translatesAutoresizingMaskIntoConstraints = false
@@ -180,6 +187,11 @@ extension MainVC{
             errorDescriptionLabel.leadingAnchor.constraint(equalTo: errorView.leadingAnchor, constant: 16),
             errorDescriptionLabel.trailingAnchor.constraint(equalTo: errorView.trailingAnchor, constant: -16),
         
+            retryButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+            retryButton.leadingAnchor.constraint(equalTo: errorView.leadingAnchor, constant: 16),
+            retryButton.trailingAnchor.constraint(equalTo: errorView.trailingAnchor, constant: -16),
+            retryButton.heightAnchor.constraint(equalToConstant: 55)
+            
         ])
         
     }

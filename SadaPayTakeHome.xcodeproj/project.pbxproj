@@ -27,6 +27,7 @@
 		C54F8AA72854E8190073FDCA /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8AA62854E8190073FDCA /* MainViewModel.swift */; };
 		C54F8AA92854EEE90073FDCA /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8AA82854EEE90073FDCA /* UIImageView+Ext.swift */; };
 		C54F8AAC2854F2C20073FDCA /* error_anim.json in Resources */ = {isa = PBXBuildFile; fileRef = C54F8AAB2854F2C20073FDCA /* error_anim.json */; };
+		C54F8AAE2854F7760073FDCA /* SadaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8AAD2854F7760073FDCA /* SadaButton.swift */; };
 		E98C0D066300E1D7712CF074 /* Pods_SadaPayTakeHome_SadaPayTakeHomeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E089E46C9C12278C31E16E48 /* Pods_SadaPayTakeHome_SadaPayTakeHomeUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		C54F8AA62854E8190073FDCA /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		C54F8AA82854EEE90073FDCA /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
 		C54F8AAB2854F2C20073FDCA /* error_anim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = error_anim.json; sourceTree = "<group>"; };
+		C54F8AAD2854F7760073FDCA /* SadaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SadaButton.swift; sourceTree = "<group>"; };
 		E089E46C9C12278C31E16E48 /* Pods_SadaPayTakeHome_SadaPayTakeHomeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SadaPayTakeHome_SadaPayTakeHomeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				C54F8A8F2854984F0073FDCA /* TrendingCell.swift */,
+				C54F8AAD2854F7760073FDCA /* SadaButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 				C54F8AA92854EEE90073FDCA /* UIImageView+Ext.swift in Sources */,
 				C54F8A9C2854C3F30073FDCA /* NetworkManager.swift in Sources */,
 				C54F8A922854A5E60073FDCA /* UIColor+Ext.swift in Sources */,
+				C54F8AAE2854F7760073FDCA /* SadaButton.swift in Sources */,
 				C54F8A8B2854975C0073FDCA /* UIImage+Ext.swift in Sources */,
 				C54F8A89285497150073FDCA /* StringConstants.swift in Sources */,
 				C54F8A942854A8530073FDCA /* TrendingResponse.swift in Sources */,

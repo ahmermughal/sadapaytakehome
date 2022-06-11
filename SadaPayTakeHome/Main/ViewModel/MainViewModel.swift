@@ -31,8 +31,7 @@ class MainViewModel{
             case .success(let response):
                 self.repos = response.items
                 DispatchQueue.main.async {
-                    //self.delegate.receivedData()
-                    self.delegate.showError(error: "test")
+                    self.delegate.receivedData()
                 }
                 break
             case .failure(let error):
