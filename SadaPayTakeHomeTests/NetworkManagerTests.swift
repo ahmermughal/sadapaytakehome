@@ -27,9 +27,8 @@ class NetworkManagerTests: XCTestCase {
         networkManager.getAPI(url: "", resultType: String.self) { result in
             
             switch result{
-                
-            case .success(let response):
-                XCTAssertNil(response)
+            case .success(_):
+                break
             case .failure(let error):
                 XCTAssertEqual(error, .invalidURL)
             }

@@ -6,18 +6,40 @@
 //
 
 import Foundation
+import UIKit
 
 class NetworkManager{
     
-    func getAPI<T:Any>(url : String, resultType: T.Type, completionHandler: @escaping (Result<T?, NetworkError>) -> Void){
+    private var urlSession: URLSession
+    
+    init(urlSession : URLSession = .shared){
+        self.urlSession = urlSession
+    }
+    
+    func getAPI<T:Decodable>(url : String, resultType: T.Type, completed: @escaping (Result<T, NetworkError>) -> Void){
         
         guard let url = URL(string: url) else {
             
-            completionHandler(.failure(.invalidURL))
+            completed(.failure(.invalidURL))
             return
         }
         
-        completionHandler(.success(nil))
+        let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            guard let data = data else{
+                completed(.failure(.invalidData))
+                return
+            }
+            
+            do{
+                let decoder = JSONDecoder()
+                let response = try decoder.decode(T.self, from: data)
+                completed(.success(response))
+            }catch{
+                completed(.failure(.invalidData))
+            }
+            
+        }
     }
     
 }
