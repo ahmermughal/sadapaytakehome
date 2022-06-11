@@ -11,7 +11,17 @@ class MainVC: UIViewController {
 
     let tableView = UITableView()
     
-    var repos : [Repo] = []
+    var viewModel : MainViewModel
+    
+    required init(viewModel: MainViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+        viewModel.delegate = self
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +36,7 @@ class MainVC: UIViewController {
         
     }
     
+    
 }
 
 extension MainVC : UITableViewDataSource, UITableViewDelegate{
@@ -38,15 +49,31 @@ extension MainVC : UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TrendingCell.reuseID, for: indexPath) as! TrendingCell
         
-        cell.set(repo: repos[indexPath.row])
+        //cell.set(repo: repos[indexPath.row])
         cell.selectionStyle = .none
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        repos[indexPath.row].isExpanded.toggle()
+        //repos[indexPath.row].isExpanded.toggle()
         tableView.reloadRows(at: [indexPath], with: .automatic)
     }
+}
+
+extension MainVC: MainViewModelDelegate{
+    func updateLoader(isLoading: Bool) {
+        
+    }
+    
+    func showError(error: String) {
+        
+    }
+    
+    func receivedData() {
+        
+    }
+    
+    
     
     
 }

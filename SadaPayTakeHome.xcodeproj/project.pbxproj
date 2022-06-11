@@ -25,6 +25,7 @@
 		C54F8A9E2854C55B0073FDCA /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A9D2854C55B0073FDCA /* NetworkError.swift */; };
 		C54F8AA02854CD7D0073FDCA /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A9F2854CD7D0073FDCA /* MockURLProtocol.swift */; };
 		C54F8AA22854CF850073FDCA /* TrendingAPIResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = C54F8AA12854CF850073FDCA /* TrendingAPIResponse.json */; };
+		C54F8AA72854E8190073FDCA /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8AA62854E8190073FDCA /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		C54F8A9D2854C55B0073FDCA /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		C54F8A9F2854CD7D0073FDCA /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		C54F8AA12854CF850073FDCA /* TrendingAPIResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TrendingAPIResponse.json; sourceTree = "<group>"; };
+		C54F8AA62854E8190073FDCA /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,9 +164,10 @@
 		C54F8A8628548EC60073FDCA /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				C54F8AA52854E8090073FDCA /* ViewModel */,
+				C54F8AA42854E8010073FDCA /* Model */,
+				C54F8AA32854E7F70073FDCA /* View */,
 				C54F8A8D285497FC0073FDCA /* Components */,
-				C54F8A5928548D0F0073FDCA /* MainVC.swift */,
-				C54F8A932854A8530073FDCA /* TrendingResponse.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -208,6 +211,30 @@
 				C54F8A9D2854C55B0073FDCA /* NetworkError.swift */,
 			);
 			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		C54F8AA32854E7F70073FDCA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C54F8A5928548D0F0073FDCA /* MainVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C54F8AA42854E8010073FDCA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C54F8A932854A8530073FDCA /* TrendingResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C54F8AA52854E8090073FDCA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C54F8AA62854E8190073FDCA /* MainViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,6 +378,7 @@
 				C54F8A9E2854C55B0073FDCA /* NetworkError.swift in Sources */,
 				C54F8A5628548D0F0073FDCA /* AppDelegate.swift in Sources */,
 				C54F8A5828548D0F0073FDCA /* SceneDelegate.swift in Sources */,
+				C54F8AA72854E8190073FDCA /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
