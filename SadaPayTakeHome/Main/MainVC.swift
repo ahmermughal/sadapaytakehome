@@ -19,10 +19,10 @@ class MainVC: UIViewController {
         configureUI()
         layoutUI()
         // TODO: Placeholde code to remove error
-        repos.append(Repo(name: "Ahmer", description: "This is a test string, This is a test string, This is a test string, This is a test string, This is a test string,", stars: "30000", language: "Swift", owner: RepoOwner(login: "ahmermughal", avatarUrl: "")))
+        repos.append(Repo(name: "Ahmer", description: "This is a test string, This is a test string, This is a test string, This is a test string, This is a test string,", stars: 30000, language: "Swift", owner: RepoOwner(login: "ahmermughal", avatarUrl: "")))
         
-        repos.append(Repo(name: "Ahmer 2", description: "This is a test string, This is a test string, This is a test string, This is a test string, This is a test string,", stars: "50000", language: "Swift", owner: RepoOwner(login: "ahmermughal2", avatarUrl: "")))
-        repos.append(Repo(name: "Ahmer 3", description: "This is a test string, This is a test string, This is a test string, This is a test string, This is a test string,", stars: "70000", language: "Swift", owner: RepoOwner(login: "ahmermughal3", avatarUrl: "")))
+        repos.append(Repo(name: "Ahmer 2", description: "This is a test string, This is a test string, This is a test string, This is a test string, This is a test string,", stars: 40000, language: "Swift", owner: RepoOwner(login: "ahmermughal2", avatarUrl: "")))
+        repos.append(Repo(name: "Ahmer 3", description: "This is a test string, This is a test string, This is a test string, This is a test string, This is a test string,", stars: 70000, language: "Swift", owner: RepoOwner(login: "ahmermughal3", avatarUrl: "")))
         tableView.reloadData()
     }
 

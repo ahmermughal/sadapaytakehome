@@ -15,8 +15,8 @@ struct Repo : Codable{
     
     let name : String
     let description : String
-    let stars : String
-    let language : String
+    let stars : Double
+    let language : String?
     let owner : RepoOwner
     var isExpanded = false
     enum CodingKeys: String, CodingKey {

@@ -24,8 +24,10 @@ class NetworkManagerTests: XCTestCase {
     
     func testGetMethod_WhenEmptyURLProvided_ShouldInvalidURLError(){
         
+        //Act
         networkManager.getAPI(url: "", resultType: String.self) { result in
             
+            //Assert
             switch result{
             case .success(_):
                 break
@@ -37,5 +39,38 @@ class NetworkManagerTests: XCTestCase {
     }
 
 
+    func testGetMethod_WhenDataIsValid_ShouldReturnSuccess(){
+        
+        let config = URLSessionConfiguration.ephemeral
+        config.protocolClasses = [MockURLProtocol.self]
+        let urlSession = URLSession(configuration: config)
+        let jsonData = getData(name: "TrendingAPIResponse")
+        MockURLProtocol.mockData = jsonData
+                
+        let netManager = NetworkManager(urlSession: urlSession)
+        
+        let expectation = self.expectation(description: "Network Manager Valid Data")
+        
+        netManager.getAPI(url: "www.google.com", resultType: TrendingResponse.self) { result in
+            
+            switch result{
+            case .success(let model):
+                XCTAssertEqual(model.items[0].name, "go")
+                expectation.fulfill()
+                break
+            case .failure(_):
+                break
+            }
+        }
+        self.wait(for: [expectation], timeout: 5)
+    }
+    
+    
+    func getData(name : String)->Data{
+
+       let bundle =  Bundle(for: type(of: self)).url(forResource: name, withExtension: "json")!
+        return try! Data(contentsOf: bundle)
+    }
+    
 
 }

@@ -24,13 +24,14 @@ class NetworkManager{
             return
         }
         
-        let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
+        let dataTask = urlSession.dataTask(with: url) { data, response, error in
             
             guard let data = data else{
                 completed(.failure(.invalidData))
                 return
             }
-            
+            print(String(decoding: data, as: UTF8.self))
+
             do{
                 let decoder = JSONDecoder()
                 let response = try decoder.decode(T.self, from: data)
@@ -40,6 +41,8 @@ class NetworkManager{
             }
             
         }
+        
+        dataTask.resume()
     }
     
 }

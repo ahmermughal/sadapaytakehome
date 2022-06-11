@@ -23,6 +23,8 @@
 		C54F8A992854C0530073FDCA /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A982854C0530073FDCA /* NetworkManagerTests.swift */; };
 		C54F8A9C2854C3F30073FDCA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A9B2854C3F30073FDCA /* NetworkManager.swift */; };
 		C54F8A9E2854C55B0073FDCA /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A9D2854C55B0073FDCA /* NetworkError.swift */; };
+		C54F8AA02854CD7D0073FDCA /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A9F2854CD7D0073FDCA /* MockURLProtocol.swift */; };
+		C54F8AA22854CF850073FDCA /* TrendingAPIResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = C54F8AA12854CF850073FDCA /* TrendingAPIResponse.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		C54F8A982854C0530073FDCA /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		C54F8A9B2854C3F30073FDCA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C54F8A9D2854C55B0073FDCA /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		C54F8A9F2854CD7D0073FDCA /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		C54F8AA12854CF850073FDCA /* TrendingAPIResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TrendingAPIResponse.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,8 @@
 			children = (
 				C54F8A6C28548D110073FDCA /* SadaPayTakeHomeTests.swift */,
 				C54F8A982854C0530073FDCA /* NetworkManagerTests.swift */,
+				C54F8A9F2854CD7D0073FDCA /* MockURLProtocol.swift */,
+				C54F8AA12854CF850073FDCA /* TrendingAPIResponse.json */,
 			);
 			path = SadaPayTakeHomeTests;
 			sourceTree = "<group>";
@@ -317,6 +323,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C54F8AA22854CF850073FDCA /* TrendingAPIResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C54F8AA02854CD7D0073FDCA /* MockURLProtocol.swift in Sources */,
 				C54F8A992854C0530073FDCA /* NetworkManagerTests.swift in Sources */,
 				C54F8A6D28548D110073FDCA /* SadaPayTakeHomeTests.swift in Sources */,
 			);
