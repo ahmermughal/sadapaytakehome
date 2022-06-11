@@ -28,7 +28,7 @@ class MainVC: UIViewController {
         configureVC()
         configureUI()
         layoutUI()
-
+        viewModel.getTrendingData()
     }
 
     // MARK: Listeners
@@ -42,27 +42,31 @@ class MainVC: UIViewController {
 extension MainVC : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return viewModel.repos.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TrendingCell.reuseID, for: indexPath) as! TrendingCell
         
-        //cell.set(repo: repos[indexPath.row])
+        cell.set(repo: viewModel.repos[indexPath.row])
         cell.selectionStyle = .none
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //repos[indexPath.row].isExpanded.toggle()
+        viewModel.repos[indexPath.row].isExpanded.toggle()
         tableView.reloadRows(at: [indexPath], with: .automatic)
     }
 }
 
 extension MainVC: MainViewModelDelegate{
     func updateLoader(isLoading: Bool) {
-        
+        if isLoading{
+            print("Loading Data")
+        }else{
+            print("Done Loading Data")
+        }
     }
     
     func showError(error: String) {
@@ -70,12 +74,8 @@ extension MainVC: MainViewModelDelegate{
     }
     
     func receivedData() {
-        
+        tableView.reloadData()
     }
-    
-    
-    
-    
 }
 
 // MARK: UI Setup
