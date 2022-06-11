@@ -18,7 +18,11 @@ class MainVC: UIViewController {
         layoutUI()
     }
 
-
+    // MARK: Listeners
+    @objc private func rightMenuTapped(){
+        
+    }
+    
 }
 
 extension MainVC : UITableViewDataSource, UITableViewDelegate{
@@ -41,6 +45,13 @@ extension MainVC : UITableViewDataSource, UITableViewDelegate{
 // MARK: UI Setup
 extension MainVC{
     private func configureVC(){
+        view.backgroundColor = .systemBackground
+        let menuDotsImage = UIImage(named: "icon-menu")!.withRenderingMode(.alwaysTemplate)
+        let menuButton = UIBarButtonItem(image: menuDotsImage, style: .plain, target: self, action: #selector(rightMenuTapped))
+        self.navigationItem.rightBarButtonItem  = menuButton
+        navigationController?.navigationBar.tintColor = .darkGray
+        
+        title = "Trending"
         
     }
     
