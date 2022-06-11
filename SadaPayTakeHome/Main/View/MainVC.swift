@@ -8,7 +8,7 @@
 import UIKit
 import Lottie
 class MainVC: UIViewController {
-
+    
     let tableView = UITableView()
     let retryButton = SadaButton(borderColor: .systemGreen, title: StringConstants.retryButtonTitle)
     let errorView = UIView()
@@ -36,10 +36,10 @@ class MainVC: UIViewController {
         layoutErrorView()
         viewModel.getTrendingData()
     }
-
+    
     // MARK: Listeners
     @objc private func rightMenuTapped(){
-        
+        viewModel.getTrendingData()
     }
     
     @objc private func retryButtonTapped(){
@@ -68,30 +68,41 @@ class MainVC: UIViewController {
 extension MainVC : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.repos.count
+        return viewModel.isLoading ? 10 : viewModel.repos.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TrendingCell.reuseID, for: indexPath) as! TrendingCell
-        
-        cell.set(repo: viewModel.repos[indexPath.row])
+        if !viewModel.isLoading{
+            cell.set(repo: viewModel.repos[indexPath.row])
+        }
         cell.selectionStyle = .none
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return viewModel.isLoading ? 80 : UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.repos[indexPath.row].isExpanded.toggle()
         tableView.reloadRows(at: [indexPath], with: .automatic)
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.setTemplateWithSubviews(viewModel.isLoading, animate: true, viewBackgroundColor: .systemBackground)
+    }
 }
 
 extension MainVC: MainViewModelDelegate{
     func updateLoader(isLoading: Bool) {
         if isLoading{
-            print("Loading Data")
+            tableView.isUserInteractionEnabled = false
+            tableView.reloadData()
         }else{
-            print("Done Loading Data")
+            tableView.isUserInteractionEnabled = true
+            tableView.reloadData()
         }
     }
     
@@ -123,7 +134,6 @@ extension MainVC{
         tableView.dataSource = self
         
         tableView.register(TrendingCell.self, forCellReuseIdentifier: TrendingCell.reuseID)
-        tableView.rowHeight = UITableView.automaticDimension
         
         errorView.isHidden = true
         errorTitleLabel.font = UIFont.preferredFont(forTextStyle: .headline)
@@ -148,7 +158,7 @@ extension MainVC{
         
         
         NSLayoutConstraint.activate([
-        
+            
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
@@ -173,7 +183,7 @@ extension MainVC{
         }
         
         NSLayoutConstraint.activate([
-        
+            
             animationView.centerXAnchor.constraint(equalTo: errorView.centerXAnchor),
             animationView.centerYAnchor.constraint(equalTo: errorView.centerYAnchor, constant: -100),
             animationView.heightAnchor.constraint(equalToConstant: 300),
@@ -186,7 +196,7 @@ extension MainVC{
             errorDescriptionLabel.topAnchor.constraint(equalTo: errorTitleLabel.bottomAnchor, constant: 16),
             errorDescriptionLabel.leadingAnchor.constraint(equalTo: errorView.leadingAnchor, constant: 16),
             errorDescriptionLabel.trailingAnchor.constraint(equalTo: errorView.trailingAnchor, constant: -16),
-        
+            
             retryButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
             retryButton.leadingAnchor.constraint(equalTo: errorView.leadingAnchor, constant: 16),
             retryButton.trailingAnchor.constraint(equalTo: errorView.trailingAnchor, constant: -16),

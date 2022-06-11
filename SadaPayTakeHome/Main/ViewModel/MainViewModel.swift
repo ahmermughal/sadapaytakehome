@@ -17,26 +17,27 @@ class MainViewModel{
     
     var delegate : MainViewModelDelegate!
     var repos : [Repo] = []
+    var isLoading = false {
+        didSet {
+            delegate.updateLoader(isLoading: isLoading)
+        }
+    }
     
     func getTrendingData(){
-        delegate.updateLoader(isLoading: true)
+        isLoading = true
         NetworkManager.shared.getTrendingRepos { [weak self] result in
             guard let self = self else {return}
-            
-            DispatchQueue.main.async {
-                self.delegate.updateLoader(isLoading: false)
-            }
-            
             switch result{
             case .success(let response):
                 self.repos = response.items
                 DispatchQueue.main.async {
-                    self.delegate.receivedData()
+                    self.isLoading = false
                 }
                 break
             case .failure(let error):
                 DispatchQueue.main.async {
                     self.delegate.showError(error: error.rawValue)
+                    self.isLoading = false
                 }
                 break
             }

@@ -7,6 +7,7 @@ target 'SadaPayTakeHome' do
 
   # Pods for SadaPayTakeHome
   pod 'lottie-ios'
+  pod 'UIView-Shimmer'
 
   target 'SadaPayTakeHomeTests' do
     inherit! :search_paths

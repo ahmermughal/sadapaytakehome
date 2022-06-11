@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import UIView_Shimmer
 
-class TrendingCell: UITableViewCell {
+class TrendingCell: UITableViewCell, ShimmeringViewProtocol {
 
     static let reuseID = "TrendingCellID"
     private let profileImageViewSize : CGFloat = 60.0
@@ -17,6 +18,14 @@ class TrendingCell: UITableViewCell {
     private let languageLabel = UILabel()
     private let starsCountLabel = UILabel()
     private let profileImageView = UIImageView()
+    
+    var shimmeringAnimatedItems: [UIView] {
+        [
+            userNameLabel,
+            nameLabel,
+            profileImageView
+        ]
+    }
     
     private var descriptionBottomConstraint : NSLayoutConstraint!
     private var descriptionHeightConstraint : NSLayoutConstraint!
@@ -83,6 +92,9 @@ class TrendingCell: UITableViewCell {
         starsCountLabel.adjustsFontForContentSizeCategory = true
         nameLabel.adjustsFontForContentSizeCategory = true
         descriptionLabel.adjustsFontForContentSizeCategory = true
+        userNameLabel.text = "abcabcabc"
+        nameLabel.text = "asdakjdasadskj"
+        
    
     }
     
