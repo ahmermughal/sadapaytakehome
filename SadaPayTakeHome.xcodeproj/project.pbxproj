@@ -17,6 +17,8 @@
 		C54F8A7928548D110073FDCA /* SadaPayTakeHomeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A7828548D110073FDCA /* SadaPayTakeHomeUITestsLaunchTests.swift */; };
 		C54F8A89285497150073FDCA /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A88285497150073FDCA /* StringConstants.swift */; };
 		C54F8A8B2854975C0073FDCA /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A8A2854975C0073FDCA /* UIImage+Ext.swift */; };
+		C54F8A902854984F0073FDCA /* TrendingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A8F2854984F0073FDCA /* TrendingCell.swift */; };
+		C54F8A922854A5E60073FDCA /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A912854A5E60073FDCA /* UIColor+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		C54F8A7828548D110073FDCA /* SadaPayTakeHomeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SadaPayTakeHomeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C54F8A88285497150073FDCA /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
 		C54F8A8A2854975C0073FDCA /* UIImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
+		C54F8A8F2854984F0073FDCA /* TrendingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingCell.swift; sourceTree = "<group>"; };
+		C54F8A912854A5E60073FDCA /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,7 @@
 		C54F8A8628548EC60073FDCA /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				C54F8A8D285497FC0073FDCA /* Components */,
 				C54F8A5928548D0F0073FDCA /* MainVC.swift */,
 			);
 			path = Main;
@@ -158,8 +163,17 @@
 			isa = PBXGroup;
 			children = (
 				C54F8A8A2854975C0073FDCA /* UIImage+Ext.swift */,
+				C54F8A912854A5E60073FDCA /* UIColor+Ext.swift */,
 			);
 			path = Extentions;
+			sourceTree = "<group>";
+		};
+		C54F8A8D285497FC0073FDCA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C54F8A8F2854984F0073FDCA /* TrendingCell.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,8 +306,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C54F8A922854A5E60073FDCA /* UIColor+Ext.swift in Sources */,
 				C54F8A8B2854975C0073FDCA /* UIImage+Ext.swift in Sources */,
 				C54F8A89285497150073FDCA /* StringConstants.swift in Sources */,
+				C54F8A902854984F0073FDCA /* TrendingCell.swift in Sources */,
 				C54F8A5A28548D0F0073FDCA /* MainVC.swift in Sources */,
 				C54F8A5628548D0F0073FDCA /* AppDelegate.swift in Sources */,
 				C54F8A5828548D0F0073FDCA /* SceneDelegate.swift in Sources */,
@@ -395,7 +411,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -450,7 +466,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

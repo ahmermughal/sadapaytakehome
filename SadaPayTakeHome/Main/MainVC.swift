@@ -29,13 +29,13 @@ extension MainVC : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // TODO: Placeholde code to remove error
-        return 0
+        return 3
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // TODO: Placeholde code to remove error
-        return UITableViewCell()
+        return TrendingCell()
     }
     
     
@@ -46,6 +46,7 @@ extension MainVC : UITableViewDataSource, UITableViewDelegate{
 extension MainVC{
     private func configureVC(){
         view.backgroundColor = .systemBackground
+        
         let menuDotsImage = UIImage.menuIcon.withRenderingMode(.alwaysTemplate)
         let menuButton = UIBarButtonItem(image: menuDotsImage, style: .plain, target: self, action: #selector(rightMenuTapped))
         self.navigationItem.rightBarButtonItem  = menuButton
@@ -58,6 +59,12 @@ extension MainVC{
     private func configureUI(){
         tableView.delegate = self
         tableView.dataSource = self
+        
+        tableView.register(TrendingCell.self, forCellReuseIdentifier: TrendingCell.reuseID)
+        tableView.estimatedRowHeight = UITableView.automaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
+        
+        
     }
     
     private func layoutUI(){
