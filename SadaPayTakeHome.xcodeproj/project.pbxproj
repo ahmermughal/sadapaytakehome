@@ -15,6 +15,8 @@
 		C54F8A6D28548D110073FDCA /* SadaPayTakeHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A6C28548D110073FDCA /* SadaPayTakeHomeTests.swift */; };
 		C54F8A7728548D110073FDCA /* SadaPayTakeHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A7628548D110073FDCA /* SadaPayTakeHomeUITests.swift */; };
 		C54F8A7928548D110073FDCA /* SadaPayTakeHomeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A7828548D110073FDCA /* SadaPayTakeHomeUITestsLaunchTests.swift */; };
+		C54F8A89285497150073FDCA /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A88285497150073FDCA /* StringConstants.swift */; };
+		C54F8A8B2854975C0073FDCA /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A8A2854975C0073FDCA /* UIImage+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		C54F8A7228548D110073FDCA /* SadaPayTakeHomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SadaPayTakeHomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C54F8A7628548D110073FDCA /* SadaPayTakeHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SadaPayTakeHomeUITests.swift; sourceTree = "<group>"; };
 		C54F8A7828548D110073FDCA /* SadaPayTakeHomeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SadaPayTakeHomeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C54F8A88285497150073FDCA /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
+		C54F8A8A2854975C0073FDCA /* UIImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 		C54F8A5428548D0F0073FDCA /* SadaPayTakeHome */ = {
 			isa = PBXGroup;
 			children = (
+				C54F8A8C2854979D0073FDCA /* Extentions */,
+				C54F8A87285496F80073FDCA /* Utils */,
 				C54F8A8628548EC60073FDCA /* Main */,
 				C54F8A8528548E6E0073FDCA /* Support */,
 				C54F8A6328548D110073FDCA /* Info.plist */,
@@ -138,6 +144,22 @@
 				C54F8A5928548D0F0073FDCA /* MainVC.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		C54F8A87285496F80073FDCA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C54F8A88285497150073FDCA /* StringConstants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C54F8A8C2854979D0073FDCA /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				C54F8A8A2854975C0073FDCA /* UIImage+Ext.swift */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +292,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C54F8A8B2854975C0073FDCA /* UIImage+Ext.swift in Sources */,
+				C54F8A89285497150073FDCA /* StringConstants.swift in Sources */,
 				C54F8A5A28548D0F0073FDCA /* MainVC.swift in Sources */,
 				C54F8A5628548D0F0073FDCA /* AppDelegate.swift in Sources */,
 				C54F8A5828548D0F0073FDCA /* SceneDelegate.swift in Sources */,

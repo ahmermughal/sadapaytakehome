@@ -46,12 +46,12 @@ extension MainVC : UITableViewDataSource, UITableViewDelegate{
 extension MainVC{
     private func configureVC(){
         view.backgroundColor = .systemBackground
-        let menuDotsImage = UIImage(named: "icon-menu")!.withRenderingMode(.alwaysTemplate)
+        let menuDotsImage = UIImage.menuIcon.withRenderingMode(.alwaysTemplate)
         let menuButton = UIBarButtonItem(image: menuDotsImage, style: .plain, target: self, action: #selector(rightMenuTapped))
         self.navigationItem.rightBarButtonItem  = menuButton
         navigationController?.navigationBar.tintColor = .darkGray
         
-        title = "Trending"
+        title = StringConstants.trending
         
     }
     
