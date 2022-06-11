@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C54F8A5628548D0F0073FDCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A5528548D0F0073FDCA /* AppDelegate.swift */; };
+		C54F8A5828548D0F0073FDCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A5728548D0F0073FDCA /* SceneDelegate.swift */; };
+		C54F8A5A28548D0F0073FDCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A5928548D0F0073FDCA /* ViewController.swift */; };
+		C54F8A5D28548D0F0073FDCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C54F8A5B28548D0F0073FDCA /* Main.storyboard */; };
+		C54F8A5F28548D110073FDCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C54F8A5E28548D110073FDCA /* Assets.xcassets */; };
+		C54F8A6228548D110073FDCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C54F8A6028548D110073FDCA /* LaunchScreen.storyboard */; };
+		C54F8A6D28548D110073FDCA /* SadaPayTakeHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A6C28548D110073FDCA /* SadaPayTakeHomeTests.swift */; };
+		C54F8A7728548D110073FDCA /* SadaPayTakeHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A7628548D110073FDCA /* SadaPayTakeHomeUITests.swift */; };
+		C54F8A7928548D110073FDCA /* SadaPayTakeHomeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A7828548D110073FDCA /* SadaPayTakeHomeUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C54F8A6928548D110073FDCA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C54F8A4A28548D0F0073FDCA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C54F8A5128548D0F0073FDCA;
+			remoteInfo = SadaPayTakeHome;
+		};
+		C54F8A7328548D110073FDCA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C54F8A4A28548D0F0073FDCA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C54F8A5128548D0F0073FDCA;
+			remoteInfo = SadaPayTakeHome;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C54F8A5228548D0F0073FDCA /* SadaPayTakeHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SadaPayTakeHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C54F8A5528548D0F0073FDCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C54F8A5728548D0F0073FDCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C54F8A5928548D0F0073FDCA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C54F8A5C28548D0F0073FDCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C54F8A5E28548D110073FDCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C54F8A6128548D110073FDCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C54F8A6328548D110073FDCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C54F8A6828548D110073FDCA /* SadaPayTakeHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SadaPayTakeHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C54F8A6C28548D110073FDCA /* SadaPayTakeHomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SadaPayTakeHomeTests.swift; sourceTree = "<group>"; };
+		C54F8A7228548D110073FDCA /* SadaPayTakeHomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SadaPayTakeHomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C54F8A7628548D110073FDCA /* SadaPayTakeHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SadaPayTakeHomeUITests.swift; sourceTree = "<group>"; };
+		C54F8A7828548D110073FDCA /* SadaPayTakeHomeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SadaPayTakeHomeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C54F8A4F28548D0F0073FDCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C54F8A6528548D110073FDCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C54F8A6F28548D110073FDCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C54F8A4928548D0F0073FDCA = {
+			isa = PBXGroup;
+			children = (
+				C54F8A5428548D0F0073FDCA /* SadaPayTakeHome */,
+				C54F8A6B28548D110073FDCA /* SadaPayTakeHomeTests */,
+				C54F8A7528548D110073FDCA /* SadaPayTakeHomeUITests */,
+				C54F8A5328548D0F0073FDCA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C54F8A5328548D0F0073FDCA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C54F8A5228548D0F0073FDCA /* SadaPayTakeHome.app */,
+				C54F8A6828548D110073FDCA /* SadaPayTakeHomeTests.xctest */,
+				C54F8A7228548D110073FDCA /* SadaPayTakeHomeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C54F8A5428548D0F0073FDCA /* SadaPayTakeHome */ = {
+			isa = PBXGroup;
+			children = (
+				C54F8A5528548D0F0073FDCA /* AppDelegate.swift */,
+				C54F8A5728548D0F0073FDCA /* SceneDelegate.swift */,
+				C54F8A5928548D0F0073FDCA /* ViewController.swift */,
+				C54F8A5B28548D0F0073FDCA /* Main.storyboard */,
+				C54F8A5E28548D110073FDCA /* Assets.xcassets */,
+				C54F8A6028548D110073FDCA /* LaunchScreen.storyboard */,
+				C54F8A6328548D110073FDCA /* Info.plist */,
+			);
+			path = SadaPayTakeHome;
+			sourceTree = "<group>";
+		};
+		C54F8A6B28548D110073FDCA /* SadaPayTakeHomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				C54F8A6C28548D110073FDCA /* SadaPayTakeHomeTests.swift */,
+			);
+			path = SadaPayTakeHomeTests;
+			sourceTree = "<group>";
+		};
+		C54F8A7528548D110073FDCA /* SadaPayTakeHomeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C54F8A7628548D110073FDCA /* SadaPayTakeHomeUITests.swift */,
+				C54F8A7828548D110073FDCA /* SadaPayTakeHomeUITestsLaunchTests.swift */,
+			);
+			path = SadaPayTakeHomeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C54F8A5128548D0F0073FDCA /* SadaPayTakeHome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C54F8A7C28548D110073FDCA /* Build configuration list for PBXNativeTarget "SadaPayTakeHome" */;
+			buildPhases = (
+				C54F8A4E28548D0F0073FDCA /* Sources */,
+				C54F8A4F28548D0F0073FDCA /* Frameworks */,
+				C54F8A5028548D0F0073FDCA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SadaPayTakeHome;
+			productName = SadaPayTakeHome;
+			productReference = C54F8A5228548D0F0073FDCA /* SadaPayTakeHome.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C54F8A6728548D110073FDCA /* SadaPayTakeHomeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C54F8A7F28548D110073FDCA /* Build configuration list for PBXNativeTarget "SadaPayTakeHomeTests" */;
+			buildPhases = (
+				C54F8A6428548D110073FDCA /* Sources */,
+				C54F8A6528548D110073FDCA /* Frameworks */,
+				C54F8A6628548D110073FDCA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C54F8A6A28548D110073FDCA /* PBXTargetDependency */,
+			);
+			name = SadaPayTakeHomeTests;
+			productName = SadaPayTakeHomeTests;
+			productReference = C54F8A6828548D110073FDCA /* SadaPayTakeHomeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C54F8A7128548D110073FDCA /* SadaPayTakeHomeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C54F8A8228548D110073FDCA /* Build configuration list for PBXNativeTarget "SadaPayTakeHomeUITests" */;
+			buildPhases = (
+				C54F8A6E28548D110073FDCA /* Sources */,
+				C54F8A6F28548D110073FDCA /* Frameworks */,
+				C54F8A7028548D110073FDCA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C54F8A7428548D110073FDCA /* PBXTargetDependency */,
+			);
+			name = SadaPayTakeHomeUITests;
+			productName = SadaPayTakeHomeUITests;
+			productReference = C54F8A7228548D110073FDCA /* SadaPayTakeHomeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C54F8A4A28548D0F0073FDCA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					C54F8A5128548D0F0073FDCA = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					C54F8A6728548D110073FDCA = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = C54F8A5128548D0F0073FDCA;
+					};
+					C54F8A7128548D110073FDCA = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = C54F8A5128548D0F0073FDCA;
+					};
+				};
+			};
+			buildConfigurationList = C54F8A4D28548D0F0073FDCA /* Build configuration list for PBXProject "SadaPayTakeHome" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C54F8A4928548D0F0073FDCA;
+			productRefGroup = C54F8A5328548D0F0073FDCA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C54F8A5128548D0F0073FDCA /* SadaPayTakeHome */,
+				C54F8A6728548D110073FDCA /* SadaPayTakeHomeTests */,
+				C54F8A7128548D110073FDCA /* SadaPayTakeHomeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C54F8A5028548D0F0073FDCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C54F8A6228548D110073FDCA /* LaunchScreen.storyboard in Resources */,
+				C54F8A5F28548D110073FDCA /* Assets.xcassets in Resources */,
+				C54F8A5D28548D0F0073FDCA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C54F8A6628548D110073FDCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C54F8A7028548D110073FDCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C54F8A4E28548D0F0073FDCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C54F8A5A28548D0F0073FDCA /* ViewController.swift in Sources */,
+				C54F8A5628548D0F0073FDCA /* AppDelegate.swift in Sources */,
+				C54F8A5828548D0F0073FDCA /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C54F8A6428548D110073FDCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C54F8A6D28548D110073FDCA /* SadaPayTakeHomeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C54F8A6E28548D110073FDCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C54F8A7928548D110073FDCA /* SadaPayTakeHomeUITestsLaunchTests.swift in Sources */,
+				C54F8A7728548D110073FDCA /* SadaPayTakeHomeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C54F8A6A28548D110073FDCA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C54F8A5128548D0F0073FDCA /* SadaPayTakeHome */;
+			targetProxy = C54F8A6928548D110073FDCA /* PBXContainerItemProxy */;
+		};
+		C54F8A7428548D110073FDCA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C54F8A5128548D0F0073FDCA /* SadaPayTakeHome */;
+			targetProxy = C54F8A7328548D110073FDCA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C54F8A5B28548D0F0073FDCA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C54F8A5C28548D0F0073FDCA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C54F8A6028548D110073FDCA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C54F8A6128548D110073FDCA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C54F8A7A28548D110073FDCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C54F8A7B28548D110073FDCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C54F8A7D28548D110073FDCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7DQ27655C6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SadaPayTakeHome/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ahmermughal.SadaPayTakeHome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C54F8A7E28548D110073FDCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7DQ27655C6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SadaPayTakeHome/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ahmermughal.SadaPayTakeHome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C54F8A8028548D110073FDCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7DQ27655C6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ahmermughal.SadaPayTakeHomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SadaPayTakeHome.app/SadaPayTakeHome";
+			};
+			name = Debug;
+		};
+		C54F8A8128548D110073FDCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7DQ27655C6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ahmermughal.SadaPayTakeHomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SadaPayTakeHome.app/SadaPayTakeHome";
+			};
+			name = Release;
+		};
+		C54F8A8328548D110073FDCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7DQ27655C6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ahmermughal.SadaPayTakeHomeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SadaPayTakeHome;
+			};
+			name = Debug;
+		};
+		C54F8A8428548D110073FDCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7DQ27655C6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ahmermughal.SadaPayTakeHomeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SadaPayTakeHome;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C54F8A4D28548D0F0073FDCA /* Build configuration list for PBXProject "SadaPayTakeHome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C54F8A7A28548D110073FDCA /* Debug */,
+				C54F8A7B28548D110073FDCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C54F8A7C28548D110073FDCA /* Build configuration list for PBXNativeTarget "SadaPayTakeHome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C54F8A7D28548D110073FDCA /* Debug */,
+				C54F8A7E28548D110073FDCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C54F8A7F28548D110073FDCA /* Build configuration list for PBXNativeTarget "SadaPayTakeHomeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C54F8A8028548D110073FDCA /* Debug */,
+				C54F8A8128548D110073FDCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C54F8A8228548D110073FDCA /* Build configuration list for PBXNativeTarget "SadaPayTakeHomeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C54F8A8328548D110073FDCA /* Debug */,
+				C54F8A8428548D110073FDCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C54F8A4A28548D0F0073FDCA /* Project object */;
+}
