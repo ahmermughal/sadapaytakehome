@@ -30,6 +30,7 @@ class TrendingCell: UITableViewCell {
     }
     
     
+    
     private func configure(){
         descriptionLabel.numberOfLines = 0
         profileImageView.layer.cornerRadius = profileImageViewSize/2
@@ -116,10 +117,6 @@ class TrendingCell: UITableViewCell {
             descriptionLabel.leadingAnchor.constraint(equalTo: nameLabel.leadingAnchor),
             descriptionLabel.bottomAnchor.constraint(equalTo: languageLabel.topAnchor, constant: -8),
             descriptionLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16)
-            
-            
-            
-            
         
         ])
         

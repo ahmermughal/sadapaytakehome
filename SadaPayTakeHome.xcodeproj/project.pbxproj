@@ -19,6 +19,7 @@
 		C54F8A8B2854975C0073FDCA /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A8A2854975C0073FDCA /* UIImage+Ext.swift */; };
 		C54F8A902854984F0073FDCA /* TrendingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A8F2854984F0073FDCA /* TrendingCell.swift */; };
 		C54F8A922854A5E60073FDCA /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A912854A5E60073FDCA /* UIColor+Ext.swift */; };
+		C54F8A942854A8530073FDCA /* TrendingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F8A932854A8530073FDCA /* TrendingResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		C54F8A8A2854975C0073FDCA /* UIImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
 		C54F8A8F2854984F0073FDCA /* TrendingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingCell.swift; sourceTree = "<group>"; };
 		C54F8A912854A5E60073FDCA /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		C54F8A932854A8530073FDCA /* TrendingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			children = (
 				C54F8A8D285497FC0073FDCA /* Components */,
 				C54F8A5928548D0F0073FDCA /* MainVC.swift */,
+				C54F8A932854A8530073FDCA /* TrendingResponse.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				C54F8A922854A5E60073FDCA /* UIColor+Ext.swift in Sources */,
 				C54F8A8B2854975C0073FDCA /* UIImage+Ext.swift in Sources */,
 				C54F8A89285497150073FDCA /* StringConstants.swift in Sources */,
+				C54F8A942854A8530073FDCA /* TrendingResponse.swift in Sources */,
 				C54F8A902854984F0073FDCA /* TrendingCell.swift in Sources */,
 				C54F8A5A28548D0F0073FDCA /* MainVC.swift in Sources */,
 				C54F8A5628548D0F0073FDCA /* AppDelegate.swift in Sources */,
