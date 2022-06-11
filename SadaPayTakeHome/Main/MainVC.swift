@@ -29,7 +29,7 @@ extension MainVC : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // TODO: Placeholde code to remove error
-        return 3
+        return 0
     }
     
     

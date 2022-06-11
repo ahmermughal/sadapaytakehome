@@ -107,6 +107,7 @@
 		C54F8A5428548D0F0073FDCA /* SadaPayTakeHome */ = {
 			isa = PBXGroup;
 			children = (
+				C54F8A972854AB390073FDCA /* SampleData */,
 				C54F8A8C2854979D0073FDCA /* Extentions */,
 				C54F8A87285496F80073FDCA /* Utils */,
 				C54F8A8628548EC60073FDCA /* Main */,
@@ -177,6 +178,13 @@
 				C54F8A8F2854984F0073FDCA /* TrendingCell.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		C54F8A972854AB390073FDCA /* SampleData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SampleData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

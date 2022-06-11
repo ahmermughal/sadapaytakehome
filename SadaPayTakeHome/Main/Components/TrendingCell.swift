@@ -30,6 +30,13 @@ class TrendingCell: UITableViewCell {
     }
     
     
+    func set(repo: Repo){
+        userNameLabel.text = repo.owner.login
+        nameLabel.text = repo.name
+        descriptionLabel.text = repo.description
+        setImageWithStringOn(label: languageLabel, string: repo.language, image: UIImage(systemName: "circle.fill")!, color: .systemBlue)
+        setImageWithStringOn(label: starsCountLabel, string: repo.stars, image: UIImage(systemName: "star.fill")!, color: .systemBlue)
+    }
     
     private func configure(){
         descriptionLabel.numberOfLines = 0
@@ -46,38 +53,21 @@ class TrendingCell: UITableViewCell {
         starsCountLabel.adjustsFontForContentSizeCategory = true
         nameLabel.adjustsFontForContentSizeCategory = true
         descriptionLabel.adjustsFontForContentSizeCategory = true
+   
+    }
+    
+    private func setImageWithStringOn(label : UILabel, string: String, image: UIImage, color: UIColor){
+        let attrString = NSMutableAttributedString(string: "")
+
+        let textAttachment = NSTextAttachment()
+        textAttachment.image = image.withTintColor(color, renderingMode: .alwaysTemplate)
         
-        
-        userNameLabel.text = "ahmermughal"
-        nameLabel.text = "Hello-World"
-        descriptionLabel.text = "This is a test library, This is a test library, This is a test library, This is a test library"
-        languageLabel.text = "Swift"
-        profileImageView.image = UIImage(named: "test-image")!
-        
-        let fullString = NSMutableAttributedString(string: "")
+        let imageStr = NSAttributedString(attachment: textAttachment)
 
-        let image1Attachment = NSTextAttachment()
-        image1Attachment.image = UIImage(systemName: "star.fill")!.withTintColor(.golden, renderingMode: .alwaysTemplate)
-        
-        let image1String = NSAttributedString(attachment: image1Attachment)
+        attrString.append(imageStr)
+        attrString.append(NSAttributedString(string: " \(string)"))
 
-        fullString.append(image1String)
-        fullString.append(NSAttributedString(string: " 2000"))
-
-        starsCountLabel.attributedText = fullString
-
-        let langStr = NSMutableAttributedString(string: "")
-
-        let langAttachment = NSTextAttachment()
-        langAttachment.image = UIImage(systemName: "circle.fill")!.withTintColor(.systemRed, renderingMode: .alwaysTemplate)
-        
-        let langImageStr = NSAttributedString(attachment: langAttachment)
-
-        langStr.append(langImageStr)
-        langStr.append(NSAttributedString(string: " Swift"))
-
-        languageLabel.attributedText = langStr
-        
+        label.attributedText = attrString
     }
     
     private func layout(){
