@@ -13,7 +13,7 @@ class NetworkManager{
     static let shared = NetworkManager()
     private let baseURL = "https://api.github.com/search/repositories"
     private var urlSession: URLSession
-    
+    let imageCache = NSCache<NSString, UIImage>()
     
     init(urlSession : URLSession = .shared){
         self.urlSession = urlSession
@@ -66,6 +66,13 @@ class NetworkManager{
     
     func downloadImage(from urlString: String, completed: @escaping (UIImage?) -> Void){
         
+        let cacheKey = NSString(string: urlString)
+        
+        if let image = imageCache.object(forKey: cacheKey){
+            completed(image)
+            return
+        }
+        
         guard let urlStr = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else{
             completed(nil)
             return
@@ -85,6 +92,9 @@ class NetworkManager{
                 completed(nil)
                 return
             }
+            
+            self.imageCache.setObject(image, forKey: cacheKey)
+            
             completed(image)
             
         }
