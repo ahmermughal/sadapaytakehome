@@ -18,12 +18,7 @@ class MainVC: UIViewController {
         configureVC()
         configureUI()
         layoutUI()
-        // TODO: Placeholde code to remove error
-        repos.append(Repo(name: "Ahmer", description: "This is a test string, This is a test string, This is a test string, This is a test string, This is a test string,", stars: 30000, language: "Swift", owner: RepoOwner(login: "ahmermughal", avatarUrl: "")))
-        
-        repos.append(Repo(name: "Ahmer 2", description: "This is a test string, This is a test string, This is a test string, This is a test string, This is a test string,", stars: 40000, language: "Swift", owner: RepoOwner(login: "ahmermughal2", avatarUrl: "")))
-        repos.append(Repo(name: "Ahmer 3", description: "This is a test string, This is a test string, This is a test string, This is a test string, This is a test string,", stars: 70000, language: "Swift", owner: RepoOwner(login: "ahmermughal3", avatarUrl: "")))
-        tableView.reloadData()
+
     }
 
     // MARK: Listeners
@@ -36,13 +31,11 @@ class MainVC: UIViewController {
 extension MainVC : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // TODO: Placeholde code to remove error
-        return repos.count
+        return 0
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // TODO: Placeholde code to remove error
         let cell = tableView.dequeueReusableCell(withIdentifier: TrendingCell.reuseID, for: indexPath) as! TrendingCell
         
         cell.set(repo: repos[indexPath.row])
